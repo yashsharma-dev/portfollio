@@ -1,0 +1,219 @@
+
+
+/* Container */
+.container {
+  /* background-color: red; */
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  height: fit-content;
+}
+
+/* Content Div */
+.content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.content h3 {
+  font-size: clamp(2rem, 8vw, 4rem);
+  /* Responsive font size */
+  margin-bottom: 10px;
+}
+
+.content h3 span {
+  /* margin-left: 20px; */
+  background-image: linear-gradient(to right, #7BE728, #F3265F, #7F40AC, #7BE728);
+  background-size: 200% auto;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: shine 10s linear infinite;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  /* background-color: #007bff; */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 1px solid wheat;
+}
+
+.download-btn {
+  border: 1px solid white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: var(--white);
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+
+ 
+  /*  */
+  &::before {
+    content: '';
+    position: absolute;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    top: -2.5px;
+    left: -2.5px;
+    z-index: -1;
+    background: linear-gradient(135deg,
+        #ff0000, #ff7300, #fffb00, #40ff00,
+        #00ffd5, #002bff, #ff00c8, #ff0000);
+    filter: blur(8px);
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 25px;
+    opacity: 0;
+    animation: glow 20s linear infinite;
+    background-size: 600%;
+  }
+
+  &:hover{
+    border-color: black;
+    color: rgb(0, 0, 0);
+  }
+
+  &:hover::before {
+    opacity: 1;
+}
+}
+
+/* Card Div */
+.card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.info-item p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: black;
+}
+
+
+/* animation on Yash name */
+
+@keyframes shine {
+  0% {
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+
+  50% {
+    background-position-x: 800px;
+    background-position-y: 0;
+  }
+
+  50% {
+    background-position-x: 1;
+    background-position-y: 0;
+  }
+}
+
+/* animation on Downlod cv */
+
+
+@keyframes glow {
+  0% {
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+
+  50% {
+    background-position-x: 800px;
+    background-position-y: 0;
+  }
+
+  50% {
+    background-position-x: 1;
+    background-position-y: 0;
+  }
+
+}
+
+
+/* Responsive Design */
+@media (max-width: 767px) {
+
+  /* Mobile Devices: Reverse Order */
+  .container {
+    flex-direction: column;
+  }
+
+  .content {
+    order: 2;
+    /* Move content to the bottom */
+  }
+
+  .card {
+    order: 1;
+    /* Move card to the top */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 770px) {
+
+  /* Center content at 770px */
+  .container {
+    flex-direction: column;
+    /* Stack content and card vertically */
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+    height: 100vh;
+    /* Make container take full viewport height */
+  }
+}
+
+@media (min-width: 771px) {
+
+  /* Tablets and Desktops: Align content to card */
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* Align items vertically in the center */
+    gap: 40px;
+    /* Add spacing between content and card */
+  }
+
+  .content {
+    text-align: left;
+    max-width: 600px;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+}
