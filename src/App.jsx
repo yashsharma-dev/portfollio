@@ -5,11 +5,11 @@ import viteLogo from "/vite.svg";
 
 
 import "./App.css";
-import Navbar from "./componets/Navbar";
-import Home from "./componets/Home";
-import Skills from "./componets/Skills";
-import Projects from "./componets/Projects";
-import Contact from "./componets/Contact";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Projects from "./components/Projects";
 
 
 
@@ -20,7 +20,7 @@ function App() {
         <Navbar/>
       <Home/> 
       <Skills/>
-      {/* <Projects/> */}
+      <Projects/>
       <Contact/>
      
     </>

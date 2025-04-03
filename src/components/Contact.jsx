@@ -9,7 +9,7 @@ function Contact() {
     },
     {
       title: "Email",
-      Value: "yashsharmaindia26@gmaill.com",
+      Value: "yashsharmadev15@gmaill.com",
     },
   ]);
   return (
