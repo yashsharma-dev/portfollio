@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import gojo from "/src/assets/gojo.jpg";
+import gojo from "/assets/gojo.jpg";
 
 function Home() {
   return (

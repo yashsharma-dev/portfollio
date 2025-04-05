@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import logo from "../assets/pngegg.png";
+import logo from "/assets/pngegg.png";
 
 function Navbar() {
   const [isNavVisible, setIsNavVisible] = useState(false);
