@@ -9,24 +9,25 @@ function Contact() {
     },
     {
       title: "Email",
-      Value: "yashsharmadev15@gmaill.com",
+      Value: "yashsharmadev15@gmail.com",
     },
   ]);
+
   return (
     <>
-        <div className="contact" >
-            <h1>This is my Contact</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum cumque velit repellat fuga qui iure, voluptates eum enim ipsam nesciunt eveniet, harum, blanditiis totam! Distinctio voluptatum quia aut beatae recusandae.</p>
-            
-            {
-                listContact.map((value,key)=>(
-                    <div className="details" key={key}>
-                        <h3>{value.title}</h3>
-                        <p>{value.Value}</p>
-                    </div>
-                ))
-            }
-        </div>
+      <div className="contact fade-in-section" id="contact">
+        <h1>Contact Me</h1>
+        <p>
+          I'm currently open to internship opportunities where I can apply and grow my skills in full-stack development. If you'd like to connect or collaborate, feel free to reach out!
+        </p>
+
+        {listContact.map((value, key) => (
+          <div className="details" key={key}>
+            <h3>{value.title}</h3>
+            <p>{value.Value}</p>
+          </div>
+        ))}
+      </div>
     </>
   );
 }

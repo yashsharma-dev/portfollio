@@ -16,13 +16,69 @@
   --purpal: #7a43b6;
   --headerTextColor: #e945e3;
   --boxShadow: #7a43b6;
+  --bg-color: #ffffff;
+  --text-color: #1e1e1e;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --border-color: rgba(0, 0, 0, 0.2);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  
 }
+
+
 
 html,
 body {
   height: 100%;
   width: 100%;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+#home,
+#skills,
+#projects,
+#contact {
+  scroll-margin-top: 30px;
+}
+
+#home{
+  scroll-margin-top: 100px;
+
+}
+
+
+body[data-theme="light"] {
+  --bgc: #f5f5fa;
+  --white: #121212;
+  --line: #ccc;
+  --red: #c62828;
+  --purpal: #5e35b1;
+  --headerTextColor: #7a43b6;
+  --boxShadow: #7a43b6;
+
+  background-image: linear-gradient(to right,
+      transparent 0 49px,
+      var(--line) 49px),
+    linear-gradient(to bottom, transparent 0 49px, var(--line) 49px);
+  background-size: 50px 50px;
+}
+
+body[data-theme="light"] header {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] {
+  --bg-color: #0d0d0d;
+  --text-color: #f0f0f0;
+  --card-bg: rgba(30, 30, 30, 0.492);
+  --border-color: rgba(255, 255, 255, 0.2);
+  --shadow-color: rgba(255, 255, 255, 0.05);
+}
+
+
 
 body {
   margin: 0;
@@ -36,6 +92,7 @@ body {
       var(--line) 49px),
     linear-gradient(to bottom, transparent 0 49px, var(--line) 49px);
   background-size: 50px 50px;
+  transition: background-color 0.4s ease, color 0.4s ease;
 
   &::before {
     position: fixed;
@@ -52,4 +109,20 @@ body {
   }
 }
 
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
 
+.slide-down {
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

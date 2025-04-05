@@ -1,99 +1,125 @@
 .skills {
-  min-height: 100vh; /* Use min-height instead of fixed height */
+  background-color: transparent;
+  color: var(--text-color);
+  min-height: 100vh;
   margin-top: 60px;
   width: 100%;
-  padding: 20px; /* Add padding for better spacing */
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .skills .title {
   display: flex;
   justify-content: center;
   font-family: 'MuseoModerno', system-ui;
-  font-size: clamp(24px, 5vw, 30px); /* Responsive font size */
-  margin-bottom: 20px; /* Add margin for spacing */
+  font-size: clamp(24px, 5vw, 30px);
+  margin-bottom: 20px;
 }
 
 .skills .desc {
-  width: 90%; /* Make width responsive */
-  max-width: 500px; /* Limit maximum width */
+  width: 90%;
+  max-width: 500px;
   margin: auto;
   text-align: center;
-  font-size: clamp(14px, 2.5vw, 16px); /* Responsive font size */
+  font-size: clamp(14px, 2.5vw, 16px);
 }
 
 .skills .list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(3, auto); /* 3 rows */
-  gap: 20px; /* Spacing between items */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
   width: 100%;
-  padding: 20px; /* Add padding for better spacing */
+  padding: 20px;
   position: relative;
-  justify-items: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+  justify-items: center;
+  align-items: center;
+  animation: fadeIn 1s ease-in;
 }
 
 .skills .list .item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  height: 250px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.567);
-  backdrop-filter: blur(12px);
-  border-radius: 5px;
-  padding: 20px; /* Add padding for better spacing */
-  width: 250px; /* Set item width */
-  height: 250px; /* Set item height */
-  margin: auto; /* Center item horizontally */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 16px var(--shadow-color);
+  animation: slideUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.skills .list .item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 128, 255, 0.25);
 }
 
 .skills .list .item .card_icon {
-  font-size: 36px;
+  font-size: 40px;
   margin-bottom: 10px;
+  animation: bounce 1s infinite;
 }
 
 .skills .list .item h3 {
-  font-size: clamp(18px, 4vw, 20px); /* Responsive font size */
+  font-size: clamp(18px, 4vw, 20px);
   margin-bottom: 10px;
 }
 
 .skills .list .item .des {
-  font-size: clamp(12px, 2.5vw, 14px); /* Responsive font size */
+  font-size: clamp(12px, 2.5vw, 14px);
+  text-align: center;
 }
 
-.skills .list::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70%;
-  height: 70%;
-  background: linear-gradient(45deg, red, blue);
-  z-index: -1;
+.custom-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
-/* Responsive Design */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
 @media (max-width: 768px) {
   .skills .list {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-    grid-template-rows: repeat(5, auto); /* Adjust rows for smaller screens */
-    gap: 10px; /* Reduce gap for smaller screens */
-    padding: 10px; /* Reduce padding for smaller screens */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+    padding: 10px;
   }
   .skills .list .item {
-    width: 250px; /* Adjust item width for smaller screens */
-    height: 250px; /* Adjust item height for smaller screens */
+    width: 250px;
+    height: 250px;
   }
 }
 
 @media (max-width: 540px) {
   .skills .list {
-    grid-template-columns: 1fr; /* Single column on very small screens */
-    grid-template-rows: repeat(9, auto); /* Adjust rows for very small screens */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, auto);
   }
   .skills .list .item {
-    width: 100%; /* Make item width full on very small screens */
-    height: auto; /* Make item height responsive on very small screens */
+    width: 100%;
+    height: auto;
   }
 }

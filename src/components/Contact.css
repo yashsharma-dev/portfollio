@@ -1,74 +1,70 @@
-/* Main Container */
+
 .contact {
     width: 100%;
-    height: 70vh; /* Use viewport height for responsiveness */
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  /* Heading */
+ 
   .contact h1 {
     display: flex;
     justify-content: center;
     font-family: 'MuseoModerno', system-ui;
     margin-top: 80px;
-    font-size: clamp(30px, 5vw, 40px); /* Responsive font size */
+    font-size: clamp(30px, 5vw, 40px);
   }
   
-  /* Paragraph */
+  
   .contact > p {
-    width: 90%; /* Make width responsive */
-    max-width: 600px; /* Limit maximum width */
+    width: 90%; 
+    max-width: 600px; 
     margin: auto;
     text-align: center;
-    font-size: clamp(14px, 2.5vw, 16px); /* Responsive font size */
+    font-size: clamp(14px, 2.5vw, 16px);
   }
   
-  /* Details Section */
+ 
   .contact .details {
-    width: 90%; /* Make width responsive */
-    max-width: 600px; /* Limit maximum width */
+    width: 90%; 
+    max-width: 600px; 
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
   }
-  
-  /* Responsive Design */
-  
-  /* For Screens ≤ 768px */
+
   @media (max-width: 768px) {
     .contact {
-      height: auto; /* Make height responsive */
-      padding: 20px 0; /* Add padding for better spacing */
+      height: auto;
+      padding: 20px 0; 
     }
   
     .contact h1 {
-      margin-top: 40px; /* Reduce margin for smaller screens */
+      margin-top: 40px; 
     }
   
     .contact > p {
-      width: 90%; /* Adjust width for smaller screens */
+      width: 90%; 
     }
   
     .contact .details {
-      margin-top: 30px; /* Reduce margin for smaller screens */
+      margin-top: 30px;
     }
   }
   
-  /* For Screens ≤ 540px */
   @media (max-width: 540px) {
     .contact h1 {
-      font-size: 24px; /* Smaller font size for very small screens */
+      font-size: 24px; 
     }
   
     .contact > p {
-      font-size: 14px; /* Smaller font size for very small screens */
+      font-size: 14px;
     }
   
     .contact .details {
-      width: 100%; /* Full width for very small screens */
+      width: 100%;
     }
   }

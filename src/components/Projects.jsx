@@ -41,7 +41,7 @@ function Projects() {
     ])
   return (
     <>
-    <div className="projects">
+    <div className="projects" id="projects">
         <div className="heading">
             <h1>Projects</h1>
             <p>Here are some of my projects</p>
@@ -56,7 +56,7 @@ function Projects() {
                             <p>{value.desc}</p>
 
                             <div className="mission">
-                                <i class='bx bxl-codepen'></i>
+                                <i className='bx bxl-codepen'></i>
                                 <div className="miss">
                                     <h3>Mission</h3>
                                     <h4>{value.mission}</h4>
@@ -64,7 +64,7 @@ function Projects() {
                             </div>
 
                             <div className="language">
-                                <i class='bx bx-world'></i>
+                                <i className='bx bx-world'></i>
                                 <div className="lang">
                                     <h3>Language</h3>
                                     <h4>{value.language}</h4>

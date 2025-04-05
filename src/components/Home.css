@@ -1,19 +1,17 @@
-
-
-/* Container */
 .container {
-  /* background-color: red; */
-  margin-top: 75px;
+  margin-top: 105px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   padding: 20px;
   font-family: Arial, sans-serif;
   height: fit-content;
+  animation: fadeIn 1s ease-in;
+  
 }
 
-/* Content Div */
+
 .content {
   text-align: center;
   max-width: 600px;
@@ -21,12 +19,10 @@
 
 .content h3 {
   font-size: clamp(2rem, 8vw, 4rem);
-  /* Responsive font size */
   margin-bottom: 10px;
 }
 
 .content h3 span {
-  /* margin-left: 20px; */
   background-image: linear-gradient(to right, #7BE728, #F3265F, #7F40AC, #7BE728);
   background-size: 200% auto;
   -webkit-text-fill-color: transparent;
@@ -43,7 +39,6 @@
 .download-btn {
   display: inline-block;
   padding: 10px 20px;
-  /* background-color: #007bff; */
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -92,7 +87,6 @@
 }
 }
 
-/* Card Div */
 .card {
   background-color: #f8f9fa;
   border-radius: 10px;
@@ -100,6 +94,8 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 300px;
   text-align: center;
+  
+  
 }
 
 .card img {
@@ -120,8 +116,21 @@
   color: black;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.2s;
+}
 
-/* animation on Yash name */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 @keyframes shine {
   0% {
@@ -140,7 +149,6 @@
   }
 }
 
-/* animation on Downlod cv */
 
 
 @keyframes glow {
@@ -162,50 +170,42 @@
 }
 
 
-/* Responsive Design */
+
+
+
+
 @media (max-width: 767px) {
 
-  /* Mobile Devices: Reverse Order */
   .container {
     flex-direction: column;
   }
 
   .content {
     order: 2;
-    /* Move content to the bottom */
   }
 
   .card {
     order: 1;
-    /* Move card to the top */
   }
 }
 
 @media (min-width: 768px) and (max-width: 770px) {
 
-  /* Center content at 770px */
   .container {
     flex-direction: column;
-    /* Stack content and card vertically */
     justify-content: center;
-    /* Center vertically */
     align-items: center;
-    /* Center horizontally */
     height: 100vh;
-    /* Make container take full viewport height */
   }
 }
 
 @media (min-width: 771px) {
 
-  /* Tablets and Desktops: Align content to card */
   .container {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* Align items vertically in the center */
     gap: 40px;
-    /* Add spacing between content and card */
   }
 
   .content {
@@ -217,3 +217,23 @@
     max-width: 300px;
   }
 }
+
+
+@media (max-width: 450px) {
+  .container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+}
+  
+
+
