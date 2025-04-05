@@ -3,7 +3,7 @@ import './Projects.css'
 function Projects() {
     const [listProducts]=useState([
         {
-            img: "src/assets/animenebula.png",
+            img: "/assets/animenebula.png",
             name:"AnimeNebula",
             desc:"Anime Nebula is a sleek and user-friendly web platform built for anime lovers. Developed using React (Frontend) and Laravel (Backend), it provides a smooth and interactive experience for exploring anime series.",
             mission:"Immerse in anime effortlessly.",
@@ -11,28 +11,28 @@ function Projects() {
             
         },
         {
-            img:"src/assets/omniverse.png" ,
+            img:"/assets/omniverse.png" ,
             name:"Omniverse",
             desc:"Omniverse is a dedicated platform for reading manga series with a structured release schedule. Stay updated with the latest chapters, explore a vast collection, and enjoy a smooth reading experience.",
             mission:"Experience manga effortlessly.",
             language:"HTML,CSS,Javascript,Bootstrap"
         },
         {
-            img: "src/assets/Etrade.png",
+            img: "/assets/Etrade.png",
             name:"Etrade",
             desc:"E-Trade is a modern e-commerce platform offering a seamless shopping experience. Browse a wide range of products, enjoy secure transactions, and get fast delivery—all in one place.",
             mission:"Effortless shopping, anytime.",
             language:"HTML,CSS,Javascript,Bootstrap,Laravel,MySQL"
         },
         {
-            img: "src/assets/foodonline.png" ,
+            img: "/assets/foodonline.png" ,
             name:"FoodOnline",
             desc:"FoodOnline is a convenient food delivery platform that connects users with their favorite restaurants. Enjoy a wide variety of cuisines, fast deliveries, and a seamless ordering experience.",
             mission:"Delicious food, delivered fast.",
             language:"HTML,CSS,Javascript,Bootstrap,React,Laravel,MySQL"
         },
         {
-            img: "src/assets/Etech.png" ,
+            img: "/assets/Etech.png" ,
             name:"Etech",
             desc:"A platform dedicated to making learning accessible and engaging. Whether for students or professionals, it provides quality educational content, interactive lessons, and a seamless learning experience.",
             mission:"Empowering learning, effortlessly.",
