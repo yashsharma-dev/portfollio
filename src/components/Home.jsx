@@ -10,7 +10,7 @@ function Home() {
         <p>
           I'm a passionate and dedicated full-stack developer currently seeking an internship opportunity to apply my skills and grow in a professional environment. I love building creative digital experiences and solving real-world problems with clean, efficient code.
         </p>
-        <a href="#" className="download-btn">Download My CV</a>
+        <a href="#" download={"/assets/YashKumarSharmaResume (2).pdf"} className="download-btn">Download My CV</a>
       </div>
 
       <div className="card">
