@@ -1,20 +1,20 @@
 import React from "react";
 import "./Home.css";
-import gojo from "/assets/gojo.jpg";
 
 function Home() {
   return (
-    <div className="container fade-in" id="home">
+    <div className="container fade-in " id="home">
       <div className="content">
         <h3>MY NAME IS <span>YASH</span></h3>
         <p>
           I'm a passionate and dedicated full-stack developer currently seeking an internship opportunity to apply my skills and grow in a professional environment. I love building creative digital experiences and solving real-world problems with clean, efficient code.
         </p>
-        <a href="#" download={"/assets/YashKumarSharmaResume (2).pdf"} className="download-btn">Download My CV</a>
+        <a target='_blank' href="/assets/YashKumarSharmaResume (2).pdf" download className="download-btn">Download My CV</a>
       </div>
 
+
       <div className="card">
-        <img src={gojo} alt="Profile" />
+        <img src="/assets/profilepic.jpg" alt="Profile" />
         <div className="info">
           <div className="info-item">
             <p>Developer</p>

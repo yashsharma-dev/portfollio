@@ -7,36 +7,41 @@ function Projects() {
             name:"AnimeNebula",
             desc:"Anime Nebula is a sleek and user-friendly web platform built for anime lovers. Developed using React (Frontend) and Laravel (Backend), it provides a smooth and interactive experience for exploring anime series.",
             mission:"Immerse in anime effortlessly.",
-            language:"React,Laravel,MySQL,Tailwind"
+            language:"React,Laravel,MySQL,Tailwind",
+            link:"https://github.com/yashsharma-dev/Anime/tree/main"
             
-        },
-        {
-            img:"/assets/omniverse.png" ,
-            name:"Omniverse",
-            desc:"Omniverse is a dedicated platform for reading manga series with a structured release schedule. Stay updated with the latest chapters, explore a vast collection, and enjoy a smooth reading experience.",
-            mission:"Experience manga effortlessly.",
-            language:"HTML,CSS,Javascript,Bootstrap"
         },
         {
             img: "/assets/Etrade.png",
             name:"Etrade",
             desc:"E-Trade is a modern e-commerce platform offering a seamless shopping experience. Browse a wide range of products, enjoy secure transactions, and get fast delivery—all in one place.",
             mission:"Effortless shopping, anytime.",
-            language:"HTML,CSS,Javascript,Bootstrap,Laravel,MySQL"
+            language:"HTML,CSS,Javascript,Bootstrap,Laravel,MySQL",
+            link:"https://github.com/yashsharma-dev/Etrade/tree/master/Etrade"
         },
         {
             img: "/assets/foodonline.png" ,
             name:"FoodOnline",
             desc:"FoodOnline is a convenient food delivery platform that connects users with their favorite restaurants. Enjoy a wide variety of cuisines, fast deliveries, and a seamless ordering experience.",
             mission:"Delicious food, delivered fast.",
-            language:"HTML,CSS,Javascript,Bootstrap,React,Laravel,MySQL"
+            language:"HTML,CSS,Javascript,Bootstrap,React,Laravel,MySQL",
+            link:"https://github.com/yashsharma-dev/FoodOnline"
         },
         {
             img: "/assets/Etech.png" ,
             name:"Etech",
             desc:"A platform dedicated to making learning accessible and engaging. Whether for students or professionals, it provides quality educational content, interactive lessons, and a seamless learning experience.",
             mission:"Empowering learning, effortlessly.",
-            language:"HTML,CSS,Javascript,Bootstrap"
+            language:"HTML,CSS,Javascript,Bootstrap",
+            link:"https://github.com/yashsharma-dev/Etech"
+        },
+        {
+            img:"/assets/omniverse.png" ,
+            name:"Omniverse",
+            desc:"Omniverse is a dedicated platform for reading manga series with a structured release schedule. Stay updated with the latest chapters, explore a vast collection, and enjoy a smooth reading experience.",
+            mission:"Experience manga effortlessly.",
+            language:"HTML,CSS,Javascript,Bootstrap",
+            link:""
         },
     ])
   return (
@@ -73,7 +78,10 @@ function Projects() {
                         </div>
 
                         <div className="project_img">
+                            <a target='_blank' href={value.link}>
+
                             <img src={value.img} alt="" />
+                            </a>
                         </div>
                     </div>
             ))
